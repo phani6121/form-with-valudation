@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Input to Values</title>
+</head>
+
+<body>
+
+    <label for="inputValue">Enter a value:</label>
+    <input type="number" id="inputValue" />
+
+    <button onclick="addInputToValues()">Add to Values</button>
+
+    <p id="result"></p>
+
+    <script>
+        function addInputToValues() {
+            // Get the input value
+            let inputValue = parseInt(document.getElementById('inputValue').value);
+
+            // Sample array of values
+            let values = [10, 20, 30, 40];
+
+            // Adding the input value to each element in the array
+            let result = values.map((value) => value + inputValue);
+
+            // Display the result
+            document.getElementById('result').innerHTML = 'Result: ' + result;
+        }
+    </script>
+
+</body>
+
+</html>

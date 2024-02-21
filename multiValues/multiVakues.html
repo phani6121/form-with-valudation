@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form Example</title>
+</head>
+
+<body>
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Get the form element by its ID
+        var form = document.getElementById('myForm');
+
+        // Define an object with values
+        var values = { //Here create a object
+            name: 'John Doe', //Given keys and there values 
+            email: 'john@example.com',
+            age: 25
+        };
+
+        // Loop through the values and set them to the form fields
+        for (var key in values) { //Using for in loop to given values to form from the javascript 
+            if (values.hasOwnProperty(key)) { //condition is that key is in that object 
+                form.elements[key].value = values[key];
+            }
+        }
+    </script>
+
+</body>
+
+</html>
